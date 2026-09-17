@@ -46,7 +46,7 @@ public class LinkedList<T> implements IList<T>{
             size++;
         }
         else {
-            throw new UnsupportedOperationException("Index out of range");
+            throw new IndexOutOfBoundsException("Index out of range");
         }
     }
 
@@ -74,7 +74,7 @@ public class LinkedList<T> implements IList<T>{
             size--;
             return aux.getVal();
         } else {
-            throw new UnsupportedOperationException("Index out of range");
+            throw new IndexOutOfBoundsException("Index out of range");
         }
     }
 
@@ -90,7 +90,7 @@ public class LinkedList<T> implements IList<T>{
             return cursor.getVal();
         }
         else {
-            throw new UnsupportedOperationException("Index out of range");
+            throw new IndexOutOfBoundsException("Index out of range");
         }
     }
 
