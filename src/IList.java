@@ -1,4 +1,7 @@
 public interface IList<T> {
+
+    //Metodos esenciales de una lista generica
+
     void add(T e);
 
     void add(T e, int index);
