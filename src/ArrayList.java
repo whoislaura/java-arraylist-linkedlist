@@ -34,12 +34,11 @@ public class ArrayList<T> implements IList<T>{
 
     @Override
     public void add(T o, int index) {
-        if(index < size){
+        if(index >= 0 && index <= size){
             if(isFull()) expand();
 
             for(int i=size; i>index; i--){
                 //desplaza los elementos (despues de index) una posicion
-                items[i+1] = items[i];
                 items[i] = items[i-1];
             }
             items[index] = o;
@@ -76,6 +75,7 @@ public class ArrayList<T> implements IList<T>{
     public void clear() {
         cap = 10;
         items = new Object[cap];
+        size = 0;
     }
 
     @Override
