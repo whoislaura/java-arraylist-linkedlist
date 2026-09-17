@@ -1,11 +1,11 @@
-public interface IList<E> {
-    void add(E e);
+public interface IList<T> {
+    void add(T e);
 
-    void add(E e, int index);
+    void add(T e, int index);
 
-    E remove(int index);
+    T remove(int index);
 
-    E get(int index);
+    T get(int index);
 
     int size();
 
