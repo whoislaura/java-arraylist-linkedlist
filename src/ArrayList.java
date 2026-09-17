@@ -44,6 +44,9 @@ public class ArrayList<T> implements IList<T>{
             items[index] = o;
             size++;
         }
+        else {
+            throw new IndexOutOfBoundsException("Index out of range");
+        }
     }
 
     @Override
@@ -57,12 +60,19 @@ public class ArrayList<T> implements IList<T>{
             size--;
             return aux;
         }
-        return null;
+        else {
+            throw new IndexOutOfBoundsException("Index out of range");
+        }
     }
 
     @Override
     public T get(int index) {
-        return (T) items[index];
+        if(index >= 0 && index < size){
+            return (T) items[index];
+        }
+        else {
+            throw new IndexOutOfBoundsException("Index out of range");
+        }
     }
 
     @Override
